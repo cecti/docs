@@ -1,0 +1,1939 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>分析数据库服务 - 欢迎来到 Dynatrace 帮助中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="欢迎来到 Dynatrace 帮助中心" class="md-header-nav__button md-logo">
+          
+            <img src="../../../../assets/images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              欢迎来到 Dynatrace 帮助中心
+            </span>
+            <span class="md-header-nav__topic">
+              
+                分析数据库服务
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="欢迎来到 Dynatrace 帮助中心" class="md-nav__button md-logo">
+      
+        <img src="../../../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    欢迎来到 Dynatrace 帮助中心
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      快速入门
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        快速入门
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../get-started/what-is-dynatrace/" title="什么是 Dynatrace？" class="md-nav__link">
+      什么是 Dynatrace？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../get-started/get-started-with-dynatrace-saas/" title="Dynatrace SaaS" class="md-nav__link">
+      Dynatrace SaaS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../get-started/get-started-with-dynatrace-managed.md" title="Dynatrace Managed" class="md-nav__link">
+      Dynatrace Managed
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      最新动态
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        最新动态
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Release notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Release notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      OneAgent
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        OneAgent
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../whats-new/release-notes/oneagent/sprint-171/" title="Version 1.171" class="md-nav__link">
+      Version 1.171
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      支持的技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        支持的技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      云平台
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        云平台
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-1">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-1">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1-1" type="checkbox" id="nav-3-1-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-1-1">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-1-1">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/cloud-platforms/amazon-web-services/installation/get-started-with-amazon-web-services-monitoring.md" title="快速入门 AWS 监控" class="md-nav__link">
+      快速入门 AWS 监控
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1-2" type="checkbox" id="nav-3-1-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-1-2">
+      运维
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-1-2">
+        运维
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/cloud-platforms/amazon-web-services/operation/connect-to-dynatrace-using-aws-privatelink.md" title="使用 AWS PrivateLink 连接到 Dynatrace" class="md-nav__link">
+      使用 AWS PrivateLink 连接到 Dynatrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Azure
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        Azure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2-1" type="checkbox" id="nav-3-1-2-1">
+    
+    <label class="md-nav__link" for="nav-3-1-2-1">
+      Azure services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-2-1">
+        Azure services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2-1-1" type="checkbox" id="nav-3-1-2-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-2-1-1">
+      虚拟机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-1-2-1-1">
+        虚拟机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/cloud-platforms/microsoft-azure/azure-services/virtual-machines/deploy-oneagent-on-azure-virtual-machines.md" title="在 Azure 虚拟机上部署 OneAgent" class="md-nav__link">
+      在 Azure 虚拟机上部署 OneAgent
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      应用软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        应用软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-1" type="checkbox" id="nav-3-2-1-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1-1">
+      支持
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-1">
+        支持
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/java/support/support-for-jvms/" title="支持 JVM" class="md-nav__link">
+      支持 JVM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-2" type="checkbox" id="nav-3-2-1-2">
+    
+    <label class="md-nav__link" for="nav-3-2-1-2">
+      概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-2">
+        概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/java/concepts/g1-garbage-collector-java-9/" title="G1 垃圾收集器 - Java 9" class="md-nav__link">
+      G1 垃圾收集器 - Java 9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/java/concepts/top-java-memory-problems/" title="常见的 Java 内存问题" class="md-nav__link">
+      常见的 Java 内存问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-3" type="checkbox" id="nav-3-2-1-3">
+    
+    <label class="md-nav__link" for="nav-3-2-1-3">
+      配置和分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-3">
+        配置和分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/java/configuration-and-analysis/identify-memory-leaks/" title="识别内存泄漏" class="md-nav__link">
+      识别内存泄漏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/java/configuration-and-analysis/define-custom-java-services/" title="定义 Java 服务" class="md-nav__link">
+      定义 Java 服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/php/" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../technology-support/application-software/nodejs/" title="Node.js" class="md-nav__link">
+      Node.js
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      安装配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        安装配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Dynatrace SaaS" class="md-nav__link">
+      Dynatrace SaaS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Dynatrace Managed
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Dynatrace Managed
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../setup-and-configuration/dynatrace-managed/basic-concepts/overview-of-dynatracce-managed/" title="Dynatrace Managed 组件概述" class="md-nav__link">
+      Dynatrace Managed 组件概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../setup-and-configuration/dynatrace-managed/basic-concepts/dynatrace-managed-cluster-failover-mechanism/" title="Dynatrace Mangged 故障恢复机制" class="md-nav__link">
+      Dynatrace Mangged 故障恢复机制
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2">
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../setup-and-configuration/dynatrace-managed/installation/dynatrace-managed-hardware-and-system-requirements/" title="Dynatrace Managed 硬件和系统要求" class="md-nav__link">
+      Dynatrace Managed 硬件和系统要求
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      扩展 Dynatrace
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        扩展 Dynatrace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../extend-dynatrace/dynatrace-api.md" title="dynatrace-api" class="md-nav__link">
+      dynatrace-api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../extend-dynatrace/dynatrace-sdks.md" title="dynatrace-sdks" class="md-nav__link">
+      dynatrace-sdks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../extend-dynatrace/plugins.md" title="plugins" class="md-nav__link">
+      plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../extend-dynatrace/custom-metric-ingestion-and-analysis.md" title="自定义指标接入及分析" class="md-nav__link">
+      自定义指标接入及分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      如何使用 Dynatrace
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        如何使用 Dynatrace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cloud-platforms.md" title="云平台" class="md-nav__link">
+      云平台
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      真实用户监控
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        真实用户监控
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-1" type="checkbox" id="nav-6-2-1">
+    
+    <label class="md-nav__link" for="nav-6-2-1">
+      基本的 RUM 概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2-1">
+        基本的 RUM 概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/applications/" title="应用" class="md-nav__link">
+      应用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/user-actions/" title="用户操作" class="md-nav__link">
+      用户操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/user-session/" title="用户会话" class="md-nav__link">
+      用户会话
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/user-action-metrics/" title="用户操作指标" class="md-nav__link">
+      用户操作指标
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/rum-javascript-injection/" title="RUM JavaScript 注入" class="md-nav__link">
+      RUM JavaScript 注入
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/detection-of-ip-addresses-locations-and-user-agents/" title="检测 IP 地址，地理位置和用户代理" class="md-nav__link">
+      检测 IP 地址，地理位置和用户代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-1-7" type="checkbox" id="nav-6-2-1-7">
+    
+    <label class="md-nav__link" for="nav-6-2-1-7">
+      Dynatrace 得分和评分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-2-1-7">
+        Dynatrace 得分和评分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/ratings/apdex-ratings/" title="Apdex 评分" class="md-nav__link">
+      Apdex 评分
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/basic-concepts/session-replay/" title="会话重播" class="md-nav__link">
+      会话重播
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2" type="checkbox" id="nav-6-2-2">
+    
+    <label class="md-nav__link" for="nav-6-2-2">
+      RUM 的设置和配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2-2">
+        RUM 的设置和配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2-1" type="checkbox" id="nav-6-2-2-1">
+    
+    <label class="md-nav__link" for="nav-6-2-2-1">
+      Web应该用程序
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-2-2-1">
+        Web应该用程序
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2-1-1" type="checkbox" id="nav-6-2-2-1-1">
+    
+    <label class="md-nav__link" for="nav-6-2-2-1-1">
+      初始配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-2-2-1-1">
+        初始配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../real-user-monitoring/setup-and-configuration/web-applications/initial-configuration/define-your-applications-via-the-my-web-application-placeholder/" title="通过“My web application”占位符定义您的应用程序" class="md-nav__link">
+      通过“My web application”占位符定义您的应用程序
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3" checked>
+    
+    <label class="md-nav__link" for="nav-6-3">
+      数据库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        数据库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-1" type="checkbox" id="nav-6-3-1">
+    
+    <label class="md-nav__link" for="nav-6-3-1">
+      介绍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-3-1">
+        介绍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/how-database-activity-is-monitored/" title="如何监视数据库活动" class="md-nav__link">
+      如何监视数据库活动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/support-for-sql-bind-variables/" title="支持 SQL 绑定变量" class="md-nav__link">
+      支持 SQL 绑定变量
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-2" type="checkbox" id="nav-6-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-6-3-2">
+      分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-3-2">
+        分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        分析数据库服务
+      </label>
+    
+    <a href="./" title="分析数据库服务" class="md-nav__link md-nav__link--active">
+      分析数据库服务
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="数据库服务回溯" class="md-nav__link">
+    数据库服务回溯
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="响应时间分布" class="md-nav__link">
+    响应时间分布
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="分析性能下降" class="md-nav__link">
+    分析性能下降
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="分析数据库错误" class="md-nav__link">
+    分析数据库错误
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" title="SQL 服务流程分析" class="md-nav__link">
+    SQL 服务流程分析
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      进程组
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        进程组
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../process-groups/basic-concepts/which-are-the-most-important-processes/" title="哪个是最重要的进程" class="md-nav__link">
+      哪个是最重要的进程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      标签和元数据
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        标签和元数据
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-1" type="checkbox" id="nav-6-5-1">
+    
+    <label class="md-nav__link" for="nav-6-5-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags-and-metadata/basic-concepts/tags-vs-metadata/" title="标签和元数据" class="md-nav__link">
+      标签和元数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags-and-metadata/basic-concepts/best-practices-and-recommendations-for-tagging/" title="标签的最佳实践和建议" class="md-nav__link">
+      标签的最佳实践和建议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-2" type="checkbox" id="nav-6-5-2">
+    
+    <label class="md-nav__link" for="nav-6-5-2">
+      参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-2">
+        参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags-and-metadata/reference/regular-expressions-in-dynatrace/" title="Dynatrace 中的正则表达式" class="md-nav__link">
+      Dynatrace 中的正则表达式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-3" type="checkbox" id="nav-6-5-3">
+    
+    <label class="md-nav__link" for="nav-6-5-3">
+      建立
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-3">
+        建立
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags-and-metadata/setup/how-to-define-tags/" title="如何定义标签" class="md-nav__link">
+      如何定义标签
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../reference/dynatrace-web-ui-requirements/" title="Web UI 要求" class="md-nav__link">
+      Web UI 要求
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../reference/monitoring-consumption-calculation/" title="监控消费计算" class="md-nav__link">
+      监控消费计算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Dynatrace 的概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Dynatrace 的概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../reference/dynatrace-concepts/what-is-a-monitoring-environment/" title="什么是监控环境" class="md-nav__link">
+      什么是监控环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../reference/dynatrace-concepts/what-is-an-access-token/" title="什么是访问令牌" class="md-nav__link">
+      什么是访问令牌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../为什么我需要环境 ID" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../我可以设置多个监控环境吗" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="数据库服务回溯" class="md-nav__link">
+    数据库服务回溯
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="响应时间分布" class="md-nav__link">
+    响应时间分布
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="分析性能下降" class="md-nav__link">
+    分析性能下降
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="分析数据库错误" class="md-nav__link">
+    分析数据库错误
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" title="SQL 服务流程分析" class="md-nav__link">
+    SQL 服务流程分析
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">分析数据库服务</h1>
+<p>Dynatrace 监视应用程序执行的每个数据库语句的响应时间，故障率，吞吐量等。</p>
+<p>分析数据库的性能</p>
+<ol>
+<li>从导航菜单中选择<strong>数据库</strong>。</li>
+<li>选择要分析的数据库。然后显示数据库服务的概述页面（参见下面的示例）。</li>
+</ol>
+<p>数据库服务概述页面上的信息图提供了对数据库性能各个方面的深入了解，包括 <strong>SQL 查询或过程</strong>，<strong>SQL 修改</strong>，<strong>SQL 事务</strong>，任何检测到的问题或可用性问题，热点等。包含的磁贴的确切列表取决于您正在监控的数据库技术。每个磁贴都包含<strong>响应时间</strong>，<strong>故障率</strong>和<strong>吞吐量</strong>指标。 </p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-1-871-8487d18247.png" /></p>
+<p>要分析导致这些类型语句的单个语句，单击相关磁贴上的“<strong>查看数据库语句</strong>”按钮。</p>
+<p><strong>声明限制</strong></p>
+<p>默认情况下，数据库语句的长度限制为 4KB（KiloBytes）。此设置不可配置。超出此限制的数据语句将调整为 4KB。</p>
+<p>在所选时间范围内执行的所有数据库语句都列在“ <strong>详细信息”</strong>页面底部的“ <strong>数据库语句”</strong>部分中（请参阅下面的示例）。默认情况下，数据库语句基于中值响应时间进行排序。您可以选择其他排序选项 - 只需从<strong>排序依据</strong>下拉列表中选择一个。您还可以通过单击页面顶部的“ <strong>添加过滤器”</strong>按钮来<strong>过滤</strong>语句列表。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-2-850-99b29184e4.png" /></p>
+<p>单击任何语句以查看该语句的完整详细信息。对于每个语句，Dynatrace 显示<strong>执行次数</strong> /分钟数，<strong>总执行次数</strong>，<strong>总时间</strong>，<strong>响应时间中位数</strong>，<strong>响应时间最慢10％</strong>的执行次数和<strong>失败率</strong>。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-3-801-cf6a5bbb90.png" /></p>
+<h3 id="_2">数据库服务回溯</h3>
+<p>单击“ <strong>分析回溯”</strong>按钮以访问所选语句的回溯分析。该<strong>回溯</strong>页面提供了触发 SQL 语句的选定排列的点击详细信息，还允许您查看哪个服务链和哪个代码指向特定的语句。</p>
+<p><img alt="" src="https://dt-cdn.net/images/backtrace-db-application-useraction-1600-1656c91da9.png" /></p>
+<p>通过在回溯中选择特定的应用程序，您可以从这个应用程序中找到触发您正在分析的数据库语句的所有用户操作。在上面的例子中，您可以看到约 43k 数据库请求仅来自于 5.32k 左右的用户操作，并且正好有3个不同的用户操作触发了该语句。您还可以看到触发此语句的服务链。通过单击该语句并进一步研究，我们可以看到约 5.3k 用户操作导致 Apache web 服务器上的近 5.6k 请求，接近1:1的比例。然而，一旦这些请求到达我们的 easyTravel 客户前端服务，这些5.6k的请求将导致对 travelyservice 的约2万次调用。需要更多的调查来确定原因。为此，在服务调用链中选择<code>easyTravel Customer Frontend</code>。</p>
+<p><img alt="" src="https://dt-cdn.net/images/backtrace-db-service-stacktrace-1600-dcae8b9f22.png" /></p>
+<p>服务回溯的下半部适应新的选择，您现在看到所有这些用户操作都调用 easyTravel 客户前端的<code>/CalculateRecomendations</code>请求。如果其中一些请求失败了，您可以在相应的选项卡中分析它们。这里我们更感兴趣的是导致数据库调用的代码，因此我们选择 <strong>Stacktrace</strong> 选项卡来查看上下文中执行的代码。</p>
+<h3 id="_3">响应时间分布</h3>
+<p>要了解该命令的响应时间分布，请单击 <strong>Analyze Outliers</strong> 按钮。<strong>响应时间分布</strong>页面显示在不同响应时间范围内的请求数量。选择图表中的任意一列来分析属于该特定响应时间范围内的特定请求。这使您能够查看是否有经常调用的语句，并且它们对响应时间的贡献实际很长。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-5-869-92ba0d32dd.png" /></p>
+<h2 id="_4">分析性能下降</h2>
+<p>在分析性能下降时，Dynatrace 数据库监控的真正威力显现出来。</p>
+<p><img alt="" src="https://dt-cdn.net/images/database-4-1090-03b012cb2e.png" /></p>
+<p>您可以立即查看哪些语句对检测到的减速负责 - 它们在页面底部的语句列表中突出显示。在下面的示例中，检测到的响应时间降级是由两个语句（<code>Aggregations in BookingCollection</code>和<code>Aggregations in JourneyCollection</code>）引起的。</p>
+<p>要查看哪个服务执行了导致数据库速度减慢的特定语句，请单击该语句的 <strong>Service backtrace</strong> 按钮（请参阅<code>Aggregations in BookingCollection</code>下面的示例）。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-7-966-2c43e07703.png" /></p>
+<p>在本例中，它显示了执行导致速度下降的语句的服务被称为<code>easyTravel-Business</code>。</p>
+<p><img alt="" src="https://dt-cdn.net/images/database-6-1286-28bedc7573.png" /></p>
+<h2 id="_5">分析数据库错误</h2>
+<p>数据库服务概述页面上的每个磁贴都具有<strong>故障率</strong>图表。</p>
+<p><img alt="" src="https://dt-cdn.net/images/database-7-1147-33b50b1384.png" /></p>
+<p>单击“ <strong>故障率”</strong>图以打开“ <strong>详细信息”</strong>页面的“ <strong>故障”</strong>选项卡。</p>
+<p>页面底部的<strong>失败数据库语句</strong>表会立即显示哪些语句失败以及各自的失败率。</p>
+<p>单击“ <strong>查看故障详细信息”</strong>按钮以了解<strong>故障</strong>的根本原因。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-10-1323-418074e632.png" /></p>
+<p>Dynatrace 已确定此示例中高故障率的原因是 MySQL 语法错误异常。这种类型的详细错误信息可以为您的开发人员提供解决数据库问题和消除未来错误所需的信息。</p>
+<p><img alt="" src="https://dt-cdn.net/images/database-10-1090-88670ec570.png" /></p>
+<p>具有最高故障率的语句列在数据库服务概述页面的“ <strong>当前热点”</strong>部分中。单击该语句以查看该语句的“ <strong>详细信息”</strong>页面的“ <strong>失败”</strong>选项卡。</p>
+<p><img alt="" src="https://dt-cdn.net/images/database-8-1138-a4b7316f74.png" /></p>
+<h2 id="sql">SQL 服务流程分析</h2>
+<p>服务流可视化由环境中的每个服务请求触发的服务调用序列。使用服务流，您可以从单个服务，请求或其过滤子集的角度查看服务调用流，包括数据库服务调用。</p>
+<p>查看特定数据库服务触发的服务流</p>
+<ol>
+<li>从导航菜单中选择“ <strong>交易和服务</strong> ”。</li>
+<li>单击要分析的服务以打开服务的概述页面。</li>
+<li>在“ <strong>了解依赖关系”</strong>部分中，单击“ <strong>查看服务流”</strong>按钮。</li>
+</ol>
+<p>虽然 SQL 分析可以在服务分析工作流的多个位置使用，但它是<strong>服务流</strong>视图中数据库的主要分析视图。</p>
+<p>下面的示例显示了一个数据库服务流，该流已经过筛选，以专注于特定的调用链。您可以看到，每当 <strong>Customer Frontend</strong> 服务调用 <strong>JourneyService</strong> 时，<strong>25%</strong>的<strong>响应时间贡献</strong>可以归因于 <strong>EasyTravel-Business</strong> MongoDB 服务。</p>
+<p><img alt="" src="https://dt-cdn.net/images/service-flow-example-2031-5b78474a2d.png" /></p>
+<p>要查看分析时间框架内所选进程执行的数据库语句，请单击“<strong>查看数据库语句</strong>”按钮。这非常有价值，因为它可以帮助您理解为什么数据库要花费一定的时间。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-14-2014-37c263df9f.png" /></p>
+<p>要显示哪些语句具有最高的总响应时间，请从“ <strong>排序”</strong>下拉列表中选择“ <strong>按总时间排序”</strong>。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-15-2031-af569fa6a0.png" /></p>
+<p>要了解响应时间的范围，请单击“ <strong>分析异常值”</strong>按钮。</p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-16-2014-7a3b8479e2.png" /></p>
+<p>要了解随时间经历的每个单独 SQL 语句的演变以及<strong>返回</strong>的平均<strong>行</strong>数，请单击“ <strong>详细信息”</strong>。 </p>
+<p><img alt="" src="https://dt-cdn.net/images/mysql-17-2031-65c998140b.png" /></p>
+<p>单击 <strong>Service backtrace </strong>按钮以查看哪些用户单击导致此 MongoDB 语句的最慢执行。</p>
+<p><img alt="" src="https://dt-cdn.net/images/service-backtrace-1880-cedfb7a708.png" /></p>
+<p>如您所见，Dynatrace 数据库语句分析视图提供了功能强大的数据库使用情况分析。</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+          <a href="https://jinshuju.net/f/KibUGN">立即试用 Dynatrace - 最易用的 APM/AIOps 跨云智能运维平台 Powered By CECTI</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+  </body>
+</html>
