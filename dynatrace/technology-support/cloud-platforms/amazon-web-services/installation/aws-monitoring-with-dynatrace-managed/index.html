@@ -1,0 +1,2656 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>为 AWS 设置 Dynatrace Managed 监控 - 欢迎来到 Dynatrace 帮助中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.0284f74d.css">
+      
+      
+    
+    
+      <script src="../../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#aws-dynatrace-managed" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../../.." title="欢迎来到 Dynatrace 帮助中心" class="md-header-nav__button md-logo">
+          
+            <img src="../../../../../assets/images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              欢迎来到 Dynatrace 帮助中心
+            </span>
+            <span class="md-header-nav__topic">
+              
+                为 AWS 设置 Dynatrace Managed 监控
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../../.." title="欢迎来到 Dynatrace 帮助中心" class="md-nav__button md-logo">
+      
+        <img src="../../../../../assets/images/logo.svg" width="48" height="48">
+      
+    </a>
+    欢迎来到 Dynatrace 帮助中心
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      快速入门
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        快速入门
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../get-started/what-is-dynatrace/" title="什么是 Dynatrace？" class="md-nav__link">
+      什么是 Dynatrace？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../get-started/get-started-with-dynatrace-saas/" title="Dynatrace SaaS" class="md-nav__link">
+      Dynatrace SaaS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../get-started/get-started-with-dynatrace-managed/" title="Dynatrace Managed" class="md-nav__link">
+      Dynatrace Managed
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      最新动态
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        最新动态
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Release notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Release notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      OneAgent
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        OneAgent
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../whats-new/release-notes/oneagent/sprint-171/" title="Version 1.171" class="md-nav__link">
+      Version 1.171
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      支持的技术
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        支持的技术
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1">
+      云平台
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        云平台
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1" type="checkbox" id="nav-3-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1-1">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-1">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1-1" type="checkbox" id="nav-3-1-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-3-1-1-1">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-1-1">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        为 AWS 设置 Dynatrace Managed 监控
+      </label>
+    
+    <a href="./" title="为 AWS 设置 Dynatrace Managed 监控" class="md-nav__link md-nav__link--active">
+      为 AWS 设置 Dynatrace Managed 监控
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概述" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="成本" class="md-nav__link">
+    成本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" title="AWS 监控策略" class="md-nav__link">
+    AWS 监控策略
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="访问方法" class="md-nav__link">
+    访问方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="基于密钥的访问" class="md-nav__link">
+    基于密钥的访问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon" title="使用基于密钥的访问启用对 Amazon 帐户的访问" class="md-nav__link">
+    使用基于密钥的访问启用对 Amazon 帐户的访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynatrace" title="使用基于密钥的访问将您的 Amazon 账户连接到 Dynatrace" class="md-nav__link">
+    使用基于密钥的访问将您的 Amazon 账户连接到 Dynatrace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="基于角色的访问" class="md-nav__link">
+    基于角色的访问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon_1" title="使用基于角色的访问权限启用对 Amazon 账户的访问权限" class="md-nav__link">
+    使用基于角色的访问权限启用对 Amazon 账户的访问权限
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dynatrace" title="步骤1.在目标账户上为 Dynatrace 创建监视角色" class="md-nav__link">
+    步骤1.在目标账户上为 Dynatrace 创建监视角色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activegate-dynatrace-managed" title="步骤2.在源账户上为 ActiveGate 或Dynatrace Managed 服务器主机创建角色" class="md-nav__link">
+    步骤2.在源账户上为 ActiveGate 或Dynatrace Managed 服务器主机创建角色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activegate" title="步骤3.修改 ActiveGate 配置" class="md-nav__link">
+    步骤3.修改 ActiveGate 配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynatrace_1" title="使用基于角色的访问将您的 Amazon 账户连接到 Dynatrace" class="md-nav__link">
+    使用基于角色的访问将您的 Amazon 账户连接到 Dynatrace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_1" title="定义 AWS 资源标记" class="md-nav__link">
+    定义 AWS 资源标记
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-1-2" type="checkbox" id="nav-3-1-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-1-2">
+      运维
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-1-2">
+        运维
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../operation/connect-to-dynatrace-using-aws-privatelink/" title="使用 AWS PrivateLink 连接到 Dynatrace" class="md-nav__link">
+      使用 AWS PrivateLink 连接到 Dynatrace
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2">
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Azure
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        Azure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2-1" type="checkbox" id="nav-3-1-2-1">
+    
+    <label class="md-nav__link" for="nav-3-1-2-1">
+      Azure services
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-1-2-1">
+        Azure services
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-2-1-1" type="checkbox" id="nav-3-1-2-1-1">
+    
+    <label class="md-nav__link" for="nav-3-1-2-1-1">
+      虚拟机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-3-1-2-1-1">
+        虚拟机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../microsoft-azure/azure-services/virtual-machines/deploy-oneagent-on-azure-virtual-machines/" title="在 Azure 虚拟机上部署 OneAgent" class="md-nav__link">
+      在 Azure 虚拟机上部署 OneAgent
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      应用软件
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        应用软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1" type="checkbox" id="nav-3-2-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1">
+      Java
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-1">
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-1" type="checkbox" id="nav-3-2-1-1">
+    
+    <label class="md-nav__link" for="nav-3-2-1-1">
+      支持
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-1">
+        支持
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/java/support/support-for-jvms/" title="支持 JVM" class="md-nav__link">
+      支持 JVM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-2" type="checkbox" id="nav-3-2-1-2">
+    
+    <label class="md-nav__link" for="nav-3-2-1-2">
+      概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-2">
+        概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/java/concepts/g1-garbage-collector-java-9/" title="G1 垃圾收集器 - Java 9" class="md-nav__link">
+      G1 垃圾收集器 - Java 9
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/java/concepts/top-java-memory-problems/" title="常见的 Java 内存问题" class="md-nav__link">
+      常见的 Java 内存问题
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-1-3" type="checkbox" id="nav-3-2-1-3">
+    
+    <label class="md-nav__link" for="nav-3-2-1-3">
+      配置和分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-3-2-1-3">
+        配置和分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/java/configuration-and-analysis/identify-memory-leaks/" title="识别内存泄漏" class="md-nav__link">
+      识别内存泄漏
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/java/configuration-and-analysis/define-custom-java-services/" title="定义 Java 服务" class="md-nav__link">
+      定义 Java 服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/php/" title="PHP" class="md-nav__link">
+      PHP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/nodejs/" title="Node.js" class="md-nav__link">
+      Node.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/dotnet/" title=".NET" class="md-nav__link">
+      .NET
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/go/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../application-software/nginx/" title="NGINX" class="md-nav__link">
+      NGINX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      安装配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        安装配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../.." title="Dynatrace SaaS" class="md-nav__link">
+      Dynatrace SaaS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Dynatrace Managed
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        Dynatrace Managed
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-1" type="checkbox" id="nav-4-2-1">
+    
+    <label class="md-nav__link" for="nav-4-2-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/basic-concepts/overview-of-dynatracce-managed/" title="Dynatrace Managed 组件概述" class="md-nav__link">
+      Dynatrace Managed 组件概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/basic-concepts/dynatrace-managed-cluster-failover-mechanism/" title="Dynatrace Mangged 故障恢复机制" class="md-nav__link">
+      Dynatrace Mangged 故障恢复机制
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2-2" type="checkbox" id="nav-4-2-2">
+    
+    <label class="md-nav__link" for="nav-4-2-2">
+      安装
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-2-2">
+        安装
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/managed-deployment-scenarios/" title="Managed 部署方案" class="md-nav__link">
+      Managed 部署方案
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/dynatrace-managed-hardware-and-system-requirements/" title="Dynatrace Managed 硬件和系统要求" class="md-nav__link">
+      Dynatrace Managed 硬件和系统要求
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/set-up-a-cluster/" title="设置群集" class="md-nav__link">
+      设置群集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/add-a-new-cluster-node/" title="添加新的群集节点" class="md-nav__link">
+      添加新的群集节点
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/customize-installation-for-dynatrace-managed/" title="自定义安装 Dynatrace Managed" class="md-nav__link">
+      自定义安装 Dynatrace Managed
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/how-to-install-a-cluster-activegate/" title="如何安装 Cluster ActiveGate" class="md-nav__link">
+      如何安装 Cluster ActiveGate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../setup-and-configuration/dynatrace-managed/installation/install-your-own-ssl-certificate/" title="安装自己的 SSL 证书" class="md-nav__link">
+      安装自己的 SSL 证书
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      扩展 Dynatrace
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        扩展 Dynatrace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../extend-dynatrace/dynatrace-api.md" title="dynatrace-api" class="md-nav__link">
+      dynatrace-api
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../extend-dynatrace/dynatrace-sdks.md" title="dynatrace-sdks" class="md-nav__link">
+      dynatrace-sdks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../extend-dynatrace/plugins.md" title="plugins" class="md-nav__link">
+      plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../extend-dynatrace/custom-metric-ingestion-and-analysis.md" title="自定义指标接入及分析" class="md-nav__link">
+      自定义指标接入及分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      如何使用 Dynatrace
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        如何使用 Dynatrace
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/cloud-platforms.md" title="云平台" class="md-nav__link">
+      云平台
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2">
+    
+    <label class="md-nav__link" for="nav-6-2">
+      真实用户监控
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        真实用户监控
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-1" type="checkbox" id="nav-6-2-1">
+    
+    <label class="md-nav__link" for="nav-6-2-1">
+      基本的 RUM 概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2-1">
+        基本的 RUM 概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/applications/" title="应用" class="md-nav__link">
+      应用
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/user-actions/" title="用户操作" class="md-nav__link">
+      用户操作
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/user-session/" title="用户会话" class="md-nav__link">
+      用户会话
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/user-action-metrics/" title="用户操作指标" class="md-nav__link">
+      用户操作指标
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/rum-javascript-injection/" title="RUM JavaScript 注入" class="md-nav__link">
+      RUM JavaScript 注入
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/detection-of-ip-addresses-locations-and-user-agents/" title="检测 IP 地址，地理位置和用户代理" class="md-nav__link">
+      检测 IP 地址，地理位置和用户代理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-1-7" type="checkbox" id="nav-6-2-1-7">
+    
+    <label class="md-nav__link" for="nav-6-2-1-7">
+      Dynatrace 得分和评分
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-2-1-7">
+        Dynatrace 得分和评分
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/ratings/apdex-ratings/" title="Apdex 评分" class="md-nav__link">
+      Apdex 评分
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/basic-concepts/session-replay/" title="会话重播" class="md-nav__link">
+      会话重播
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2" type="checkbox" id="nav-6-2-2">
+    
+    <label class="md-nav__link" for="nav-6-2-2">
+      RUM 的设置和配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2-2">
+        RUM 的设置和配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2-1" type="checkbox" id="nav-6-2-2-1">
+    
+    <label class="md-nav__link" for="nav-6-2-2-1">
+      Web应该用程序
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-2-2-1">
+        Web应该用程序
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-2-1-1" type="checkbox" id="nav-6-2-2-1-1">
+    
+    <label class="md-nav__link" for="nav-6-2-2-1-1">
+      初始配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-2-2-1-1">
+        初始配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/real-user-monitoring/setup-and-configuration/web-applications/initial-configuration/define-your-applications-via-the-my-web-application-placeholder/" title="通过“My web application”占位符定义您的应用程序" class="md-nav__link">
+      通过“My web application”占位符定义您的应用程序
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3" type="checkbox" id="nav-6-3">
+    
+    <label class="md-nav__link" for="nav-6-3">
+      数据库
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-3">
+        数据库
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-1" type="checkbox" id="nav-6-3-1">
+    
+    <label class="md-nav__link" for="nav-6-3-1">
+      介绍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-3-1">
+        介绍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/databases/introduction/how-database-activity-is-monitored/" title="如何监视数据库活动" class="md-nav__link">
+      如何监视数据库活动
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/databases/introduction/support-for-sql-bind-variables/" title="支持 SQL 绑定变量" class="md-nav__link">
+      支持 SQL 绑定变量
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-3-2" type="checkbox" id="nav-6-3-2">
+    
+    <label class="md-nav__link" for="nav-6-3-2">
+      分析
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-3-2">
+        分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/databases/analysis/analyze-database-services/" title="分析数据库服务" class="md-nav__link">
+      分析数据库服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
+    
+    <label class="md-nav__link" for="nav-6-4">
+      进程组
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-4">
+        进程组
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4-1" type="checkbox" id="nav-6-4-1">
+    
+    <label class="md-nav__link" for="nav-6-4-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-4-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/process-groups/basic-concepts/which-are-the-most-important-processes/" title="哪个是最重要的进程" class="md-nav__link">
+      哪个是最重要的进程
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      主机
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        主机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-1" type="checkbox" id="nav-6-5-1">
+    
+    <label class="md-nav__link" for="nav-6-5-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/basic-concepts/get-started-with-infrastructure-monitoring/" title="开始使用基础设施监控" class="md-nav__link">
+      开始使用基础设施监控
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/basic-concepts/how-effective-is-infrastructure-monitoring-on-its-own/" title="基础设施监控效果如何" class="md-nav__link">
+      基础设施监控效果如何
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-2" type="checkbox" id="nav-6-5-2">
+    
+    <label class="md-nav__link" for="nav-6-5-2">
+      配置
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-2">
+        配置
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/configuration/organize-your-environment-using-host-groups/" title="使用主机组组织环境" class="md-nav__link">
+      使用主机组组织环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/configuration/set-custom-host-names-in-dynamic-environments/" title="在动态环境中设置自定义主机名" class="md-nav__link">
+      在动态环境中设置自定义主机名
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/configuration/define-tags-and-metadata-for-hosts/" title="为主机定义标签和元数据" class="md-nav__link">
+      为主机定义标签和元数据
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5-3" type="checkbox" id="nav-6-5-3">
+    
+    <label class="md-nav__link" for="nav-6-5-3">
+      监控
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-5-3">
+        监控
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/monitoring/measures-for-host-health/" title="主机健康测量" class="md-nav__link">
+      主机健康测量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/hosts/monitoring/where-can-i-view-host-performance-measures/" title="我在哪里可以查看主机性能指标" class="md-nav__link">
+      我在哪里可以查看主机性能指标
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      标签和元数据
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        标签和元数据
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6-1" type="checkbox" id="nav-6-6-1">
+    
+    <label class="md-nav__link" for="nav-6-6-1">
+      基本概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-6-1">
+        基本概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/tags-and-metadata/basic-concepts/tags-vs-metadata/" title="标签和元数据" class="md-nav__link">
+      标签和元数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/tags-and-metadata/basic-concepts/best-practices-and-recommendations-for-tagging/" title="标签的最佳实践和建议" class="md-nav__link">
+      标签的最佳实践和建议
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6-2" type="checkbox" id="nav-6-6-2">
+    
+    <label class="md-nav__link" for="nav-6-6-2">
+      参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-6-2">
+        参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/tags-and-metadata/reference/regular-expressions-in-dynatrace/" title="Dynatrace 中的正则表达式" class="md-nav__link">
+      Dynatrace 中的正则表达式
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6-3" type="checkbox" id="nav-6-6-3">
+    
+    <label class="md-nav__link" for="nav-6-6-3">
+      建立
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-6-3">
+        建立
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../how-to-use-dynatrace/tags-and-metadata/setup/how-to-define-tags/" title="如何定义标签" class="md-nav__link">
+      如何定义标签
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      参考
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        参考
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../reference/dynatrace-web-ui-requirements/" title="Web UI 要求" class="md-nav__link">
+      Web UI 要求
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../reference/monitoring-consumption-calculation/" title="监控消费计算" class="md-nav__link">
+      监控消费计算
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      Dynatrace 的概念
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        Dynatrace 的概念
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../reference/dynatrace-concepts/what-is-a-monitoring-environment/" title="什么是监控环境" class="md-nav__link">
+      什么是监控环境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../reference/dynatrace-concepts/what-is-an-access-token/" title="什么是访问令牌" class="md-nav__link">
+      什么是访问令牌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../为什么我需要环境 ID" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../我可以设置多个监控环境吗" title="None" class="md-nav__link">
+      None
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="概述" class="md-nav__link">
+    概述
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" title="成本" class="md-nav__link">
+    成本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" title="AWS 监控策略" class="md-nav__link">
+    AWS 监控策略
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="访问方法" class="md-nav__link">
+    访问方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="基于密钥的访问" class="md-nav__link">
+    基于密钥的访问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon" title="使用基于密钥的访问启用对 Amazon 帐户的访问" class="md-nav__link">
+    使用基于密钥的访问启用对 Amazon 帐户的访问
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynatrace" title="使用基于密钥的访问将您的 Amazon 账户连接到 Dynatrace" class="md-nav__link">
+    使用基于密钥的访问将您的 Amazon 账户连接到 Dynatrace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="基于角色的访问" class="md-nav__link">
+    基于角色的访问
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#amazon_1" title="使用基于角色的访问权限启用对 Amazon 账户的访问权限" class="md-nav__link">
+    使用基于角色的访问权限启用对 Amazon 账户的访问权限
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dynatrace" title="步骤1.在目标账户上为 Dynatrace 创建监视角色" class="md-nav__link">
+    步骤1.在目标账户上为 Dynatrace 创建监视角色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activegate-dynatrace-managed" title="步骤2.在源账户上为 ActiveGate 或Dynatrace Managed 服务器主机创建角色" class="md-nav__link">
+    步骤2.在源账户上为 ActiveGate 或Dynatrace Managed 服务器主机创建角色
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activegate" title="步骤3.修改 ActiveGate 配置" class="md-nav__link">
+    步骤3.修改 ActiveGate 配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amazon-dynatrace_1" title="使用基于角色的访问将您的 Amazon 账户连接到 Dynatrace" class="md-nav__link">
+    使用基于角色的访问将您的 Amazon 账户连接到 Dynatrace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws_1" title="定义 AWS 资源标记" class="md-nav__link">
+    定义 AWS 资源标记
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="aws-dynatrace-managed">为 AWS 设置 Dynatrace Managed 监控</h1>
+<p>您可以将 Dynatrace 与 Amazon Web Services（AWS）集成，以智能监控 Amazon Cloud 中运行的服务。AWS 集成可帮助您掌握云中数据中心的动态。</p>
+<p><strong>重要：</strong></p>
+<p>为了成功将 Dynatrace 与 AWS 集成以监控服务，必须在 AWS 中托管至少一个 Dynatrace 组件。可以使用或不使用 <strong>Environment ActiveGate</strong> 部署 Dynatrace 。确保满足以下部署要求之一：</p>
+<ul>
+<li>对于使用 Environment ActiveGate 的部署，必须在 AWS 中托管 <strong>Environment ActiveGate</strong>。</li>
+<li>对于<strong>没有</strong> Environment ActiveGate 的部署，必须在 AWS 中托管 <strong>Dynatrace Managed 服务器</strong>。</li>
+</ul>
+<h2 id="_1">概述</h2>
+<p>按照以下基本步骤将 Dynatrace Managed 与 Amazon Web Services（AWS）集成：</p>
+<ol>
+<li>创建 AWS 监控策略</li>
+<li>选择一种访问方式：</li>
+<li>基于密钥的访问</li>
+<li>基于角色的访问</li>
+<li>定义 AWS 资源标记</li>
+</ol>
+<h3 id="_2">成本</h3>
+<p>Dynatrace 每5分钟发出一次 Amazon API 请求。除了 CloudWatch API 调用之外，Dynatrace 还会对受监控的 AWS 服务进行 API 调用，以了解其实例，标记等。下面的“ 创建监控策略”部分中提供了被调用服务和操作的列表。以下是 AWS 监控成本的粗略估计：</p>
+<table>
+<thead>
+<tr>
+<th align="left">AWS 服务</th>
+<th align="left">指标数量</th>
+<th align="left">每个实例的每日费用（美元）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">弹性计算云（EC2）</td>
+<td align="left">7</td>
+<td align="left">$ 0.02016</td>
+</tr>
+<tr>
+<td align="left">弹性块存储（EBS）</td>
+<td align="left">8</td>
+<td align="left">$ 0.02304</td>
+</tr>
+<tr>
+<td align="left">弹性负载平衡器（ELB）</td>
+<td align="left">11</td>
+<td align="left">$ 0.03168</td>
+</tr>
+<tr>
+<td align="left">关系数据库服务（RDS）</td>
+<td align="left">11</td>
+<td align="left">$ 0.03168</td>
+</tr>
+<tr>
+<td align="left">DynamoDB</td>
+<td align="left">15</td>
+<td align="left">$ 0.06912</td>
+</tr>
+<tr>
+<td align="left">LAMBDA</td>
+<td align="left">4</td>
+<td align="left">$ 0.01152</td>
+</tr>
+</tbody>
+</table>
+<p><strong>亚马逊收费</strong></p>
+<p>亚马逊将从 CloudWatch API 请求的每1,000个指标收取约0.01美元的费用，并在您使用 Dynatrace 的 AWS 账户的账单中包含费用。</p>
+<h2 id="aws">AWS 监控策略</h2>
+<p>AWS 监控策略定义了您需要为 Dynatrace 监控 AWS 账户中运行的服务所需的最小权限范围。创建一次并在启用 Dynatrace 访问您的 AWS 账户时随时使用。</p>
+<ol>
+<li>
+<p>转到 Amazon 控制台中的身份和访问管理（IAM）</p>
+</li>
+<li>
+<p>转到“<strong>策略</strong>”并单击“<strong>创建策略</strong>”</p>
+</li>
+<li>
+<p>选择 <strong>JSON</strong> 选项卡，然后粘贴下面的框中的预定义策略。</p>
+</li>
+<li>
+<p>JSON 中的预定义策略</p>
+<p><code>{
+   "Version": "2012-10-17",
+   "Statement": [
+     {
+       "Effect": "Allow",
+       "Action": [
+         "autoscaling:DescribeAutoScalingGroups",
+         "cloudwatch:GetMetricData",
+         "cloudwatch:GetMetricStatistics",
+         "ec2:DescribeAvailabilityZones",
+         "ec2:DescribeInstances",     
+         "ec2:DescribeVolumes",             
+         "elasticloadbalancing:DescribeLoadBalancers",
+         "elasticloadbalancing:DescribeTags",
+         "elasticloadbalancing:DescribeInstanceHealth",
+         "elasticloadbalancing:DescribeListeners",
+         "elasticloadbalancing:DescribeRules",
+         "elasticloadbalancing:DescribeTargetHealth",
+         "rds:DescribeDBInstances",
+         "rds:DescribeEvents",
+         "rds:ListTagsForResource",
+         "dynamodb:ListTables",
+         "dynamodb:ListTagsOfResource",
+         "lambda:ListFunctions",
+         "lambda:ListTags",
+         "elasticbeanstalk:DescribeEnvironments",
+         "elasticbeanstalk:DescribeEnvironmentResources",
+         "s3:ListAllMyBuckets",
+         "sts:GetCallerIdentity",
+         "cloudformation:ListStackResources",
+         "tag:GetResources",
+         "tag:GetTagKeys"
+       ],
+       "Resource": "*"
+     }
+   ]
+ }</code></p>
+</li>
+<li>
+<p>为该政策命名。例如<code>Dynatrace_monitoring_policy</code>。在“ <strong>名称”</strong>字段中键入它。</p>
+</li>
+<li>
+<p>单机“<strong>创建策略</strong>”按钮</p>
+</li>
+</ol>
+<h2 id="_3">访问方法</h2>
+<p>要获得全面 AWS 云计算监控所需的信息，Dynatrace 需要识别 AWS 环境中的所有虚拟化基础架构组件，并收集与这些组件相关的性能指标。我们使用此信息来了解应用程序，服务和主机的上下文。为此，您需要授权 Dynatrace 访问您的 Amazon 指标。</p>
+<p>您可以通过使用专用访问密钥（基于密钥的访问）或为 Dynatrace 定义特殊角色（基于角色的访问）来启用对 AWS 度量标准的 Dynatrace 访问。在所有情况下，请确保您的 Environment ActiveGate 或 Managed 服务器与 AWS 具有有效连接。在 Managed 或 ActiveGate 中配置代理，或<code>*.amazonaws.com</code>在防火墙设置中配置白名单。</p>
+<p>作为最佳实践，使用临时安全凭据（IAM 角色）代替访问密钥，并禁用任何AWS帐户根用户访问密钥。</p>
+<h2 id="_4">基于密钥的访问</h2>
+<p>如果您决定使用基于密钥的身份验证，请记住定期轮换密钥。请记住，每次更改密钥时都需要执行此过程。</p>
+<p><strong>您需要：</strong></p>
+<ul>
+<li>创建新 AWS 用户的权力</li>
+<li>您的 AWS 账户 ID</li>
+<li>您的 Amazon Access 密钥 ID 和秘密访问密钥</li>
+</ul>
+<h3 id="amazon">使用基于密钥的访问启用对 Amazon 帐户的访问</h3>
+<p>Dynatrace 可以使用访问密钥对 AWS 服务 API 发出安全的 REST 或查询协议请求。您需要生成一个 <strong>Access 密钥 ID</strong>和一个 <strong>Secret 访问密钥</strong>，Dynatrace 可以使用它来从 Amazon Web Services 获取指标。</p>
+<ol>
+<li>
+<p>在 Amazon 控制台中，转到“ <strong>用户”</strong>，然后单击“ <strong>添加用户”</strong>。</p>
+</li>
+<li>
+<p>输入要创建的密钥的名称（例如，<code>Dynatrace_monitoring_user</code>）。在 <strong>Select AWS access type </strong>中，选择 <strong>Programmatic access</strong> 选项，然后单击 <strong>Next：Permissions</strong> 按钮。</p>
+</li>
+<li>
+<p>点击<strong>直接附加现有政策</strong>，并选择您定义的监控策略，例如<code>Dynatrace_monitoring_policy</code>。单击<strong>下一步：查看</strong>。</p>
+</li>
+<li>
+<p>查看用户详细信息，然后单击“ <strong>创建用户”</strong>按钮。</p>
+</li>
+<li>
+<p>存储访问密钥 ID 名称（AKID）和密钥访问密钥值。
+   您可以下载用户凭据或复制在线显示的凭据（单击“ <strong>显示”</strong>）。</p>
+</li>
+</ol>
+<h3 id="amazon-dynatrace">使用基于密钥的访问将您的 Amazon 账户连接到 Dynatrace</h3>
+<p>一旦您授予了对 Dynatrace 的 AWS 访问权限，就可以将 Dynatrace 连接到您的 Amazon AWS 账户了。</p>
+<ol>
+<li>
+<p>在 Dynatrace 中，转至<strong>设置&gt;云和虚拟化&gt; AWS</strong>，然后单击<strong>连接新实例</strong>。</p>
+</li>
+<li>
+<p>选择<strong>基于密钥的验证</strong>方法。</p>
+</li>
+<li>为此连接创建名称。这是强制性的。Dynatrace 需要此名称来标识和显示连接。</li>
+<li>在“ <strong>访问密钥 ID”</strong> 字段中，粘贴您在 Amazon 中为 Dynatrace 访问创建的密钥的标识符。</li>
+<li>在“ <strong>密钥访问密钥”</strong> 字段中，粘贴您在 Amazon 中为 Dynatrace 访问创建的密钥的值。</li>
+<li>
+<p>单击“ <strong>连接”</strong> 以验证并保存连接。</p>
+</li>
+<li>
+<p>成功验证并保存连接后，您的 AWS 账户将列在<strong>云和虚拟化</strong>设置页面中。您应该很快就会看到 AWS 云监控数据。</p>
+</li>
+</ol>
+<h2 id="_5">基于角色的访问</h2>
+<p>在典型设置中，您将创建并附加两个角色，一个用于 Dynatrace，另一个用于 AWS 基础架构中托管的 Environment ActiveGate（或 Dynatrace Managed 服务器）。</p>
+<p><strong>您需要：</strong></p>
+<ul>
+<li>Environment ActiveGate 或 Dynatrace Managed 服务器（适用于没有 Environment ActiveGate 的部署）安装在 AWS EC2 主机上。他们必须能够在您的 AWS 账户中担任一个角色，允许其读取 Dynatrace 监控数据。</li>
+<li>您的 Amazon Web Services 源帐户 ID，即托管 Dynatrace 组件的帐户。</li>
+<li>启动 Dynatrace Managed 服务器或 Environment ActiveGate的角色的名称。</li>
+<li>Amazon Web Services 目标帐户 ID，即您要监控的帐户。</li>
+<li>从<strong>设置</strong> &gt; <strong>云和虚拟化</strong> &gt; <strong>AWS</strong>复制外部 ID。</li>
+</ul>
+<h3 id="amazon_1">使用基于角色的访问权限启用对 Amazon 账户的访问权限</h3>
+<p>下面描述的步骤适用于源帐户和目标帐户相同以及帐户不同的情况。如果要监视多个目标帐户，请对每个帐户重复步骤1，然后将其添加到<code>Statement.Resource</code>步骤2.4中策略中的阵列。</p>
+<h4 id="1-dynatrace">步骤1.在目标账户上为 Dynatrace 创建监视角色</h4>
+<ol>
+<li>在浏览器中，打开一个新选项卡并登录 Dynatrace 以获取外部 ID。转至<strong>设置</strong> &gt; <strong>云和虚拟化</strong> &gt; <strong>AWS</strong>，单击<strong>连接新实例</strong>，选择<strong>基于角色的身份验证</strong>方法，然后单击<strong>令牌</strong>字段旁边的<strong>复制</strong>。</li>
+<li>转到 Amazon 控制台中的身份和访问管理（IAM）。</li>
+<li>转到<strong>角色</strong>，然后单击“ <strong>创建角色”</strong>。</li>
+<li>选择<strong>另一个 AWS 账户</strong>磁贴并使用 Dynatrace 帐户建立信任。粘贴您在第一步中复制的<strong>外部 ID</strong>。粘贴用于访问目标帐户的12位源帐户 ID。单击“ <strong>下一步：权限”</strong>。</li>
+<li>在<strong>附加权限策略</strong>部分，选择您所创建的监控策略，例如<code>Dynatrace_monitoring_policy</code>。单击<strong>下一步：查看</strong>。</li>
+<li>例如，在 <strong>Review</strong> 页面上，提供角色名称<code>Dynatrace_monitoring_role</code>。请记住，稍后您需要将您的亚马逊帐户连接到 Dynatrace。单击“ <strong>创建角色”</strong>按钮。</li>
+</ol>
+<h4 id="2-activegate-dynatrace-managed">步骤2.在源账户上为 ActiveGate 或Dynatrace Managed 服务器主机创建角色</h4>
+<p>在目标帐户上创建<code>Dynatrace_monitoring_role</code>之后，为 Environment ActiveGate 或 Dyntrace Managed 服务器创建一个角色，该角色将负责 AWS 监控。</p>
+<ol>
+<li>
+<p>在 Amazon 控制台中，转到<strong>角色</strong>，然后单击<strong>创建角色</strong>。选择 <strong>AWS 服务</strong>和 <strong>EC2</strong> 作为将使用该角色的服务。单击<strong>下一步：权限，</strong>然后跳到<strong>查看</strong>页面。</p>
+</li>
+<li>
+<p>在 <strong>Review</strong> 页面上，例如为角色提供名称，<code>Dynatrace_ActiveGate_role</code>然后单击 <strong>Create role</strong>。</p>
+</li>
+<li>
+<p>选择<code>Dynatrace_ActiveGate_role</code>并单击“ <strong>添加内联策略”</strong></p>
+</li>
+<li>
+<p>选择 <strong>JSON</strong> 并粘贴下面的预定义策略。编辑并添加：</p>
+</li>
+<li>
+<p>12位数的目标帐号</p>
+</li>
+<li>在前面的步骤（例如<code>Dynatrace_monitoring_role</code>）中创建的角色名称，用于承担监视角色。</li>
+</ol>
+<p><strong>不要包含<code>&lt;and&gt;</code>字符。</strong></p>
+<ul>
+<li>
+<p>Dynatrace 监视角色预定义策略</p>
+<p><code>{
+     "Statement": [
+         {
+             "Resource": [
+                 "arn:aws:iam::&lt;12-digit target account number&gt;:role/&lt;role created in previous step (Dynatrace_monitoring_role)&gt;"
+             ],
+             "Action": [
+                 "sts:AssumeRole"
+             ],
+             "Effect": "Allow"
+         }
+     ],
+     "Version": "2012-10-17"
+ }</code></p>
+<p>完成后，粘贴<strong>更新策略</strong>，然后单击<strong>查看策略</strong>。</p>
+</li>
+<li>
+<p>例如，为刚刚创建的内联策略命名<code>Dynatrace_assume_policy</code>，然后单击“ <strong>创建策略”</strong>。</p>
+</li>
+<li>
+<p>返回<code>Dynatrace_monitoring_role</code>之前创建的并在角色摘要页面中选择 <strong>Trust relationships</strong> 选项卡，然后单击 <strong>Edit Trust Relationships</strong>。</p>
+</li>
+<li>
+<p>将下面的 JSON 示例粘贴到文本编辑器中。编辑并添加：</p>
+</li>
+<li>
+<p>12位数的来源帐号</p>
+</li>
+<li>启动 Environment ActiveGate 或 Dynatrace Managed 服务器的角色，以及在先前步骤中复制的外部标识。</li>
+</ul>
+<p><strong>不要包含<code>&lt;and&gt;</code>字符</strong></p>
+<ul>
+<li>
+<p>Dynatrace 假设策略</p>
+<p><code>{
+   "Version": "2012-10-17",
+   "Statement": [
+     {
+       "Effect": "Allow",
+       "Action": "sts:AssumeRole",      "Principal": {
+         "AWS": [
+           "arn:aws:iam::&lt;12-digit source account number&gt;:role/&lt;role for your Dynatrace Managed Server (Dynatrace_ActiveGate_role)&gt;",
+         ]
+       },
+       "Condition": {
+         "StringEquals": {
+           "sts:ExternalId": "&lt;External ID generated from tenant&gt;"
+         }
+       }
+     }
+   ]
+ }</code></p>
+<p>粘贴已修改的文本并单击“ <strong>更新信任策略”</strong>按钮。</p>
+</li>
+<li>
+<p>转到 EC2 控制台，右键单击托管 Environment ActiveGate 或 Dynatrace Managed 服务器的<strong>实例，</strong>然后选择“ <strong>实例设置”</strong> &gt;“ <strong>附加/替换 IAM 角色”</strong>。</p>
+</li>
+<li>
+<p>选择之前创建的角色<code>Dynatrace_ActiveGate_role</code>，然后单击“ <strong>应用”</strong>。</p>
+</li>
+</ul>
+<h4 id="3-activegate">步骤3.修改 ActiveGate 配置</h4>
+<ol>
+<li>
+<p>为您的 Environment ActiveGate 编辑<code>custom.properties</code>的文件。</p>
+</li>
+<li>
+<p>设置以下属性如下：</p>
+</li>
+</ol>
+<p>```
+   [vertical.topology]
+   use_aws_proxy_role = false</p>
+<p>[aws_monitoring]
+   aws_monitoring_enabled = true
+   ```</p>
+<p><strong>只能有一个：</strong></p>
+<ul>
+<li>如果部署中有多个 ActiveGates，请将该<code>aws_monitoring_enabled</code>属性设置为<code>true</code>仅在一个 ActiveGate 上。所有其他 ActiveGates 都应将此属性设置为<code>false</code>。</li>
+<li>请记住，Dynatrace 集群节点包含嵌入的 ActiveGates。确保将这些 ActiveGates 的<code>aws_monitoring_enabled</code>属性设置为<code>false</code>。</li>
+</ul>
+<p>如果 ActiveGate 专用于 AWS 监控，则还必须将该<code>MSGrouter</code>属性设置为<code>false</code>：</p>
+<p><code>[collector]
+   MSGrouter = false</code></p>
+<p>删除<code>aws_proxy_account</code>和<code>aws_proxy_role</code>属性。</p>
+<ol>
+<li>保存文件并重新启动 ActiveGate。</li>
+</ol>
+<h3 id="amazon-dynatrace_1">使用基于角色的访问将您的 Amazon 账户连接到 Dynatrace</h3>
+<p>一旦您授予了对 Dynatrace 的 AWS 访问权限，就可以将 Dynatrace 连接到您的 Amazon AWS 账户了。</p>
+<ol>
+<li>在 Dynatrace 中，转至<strong>设置&gt;云和虚拟化&gt; AWS</strong>，然后单击<strong>连接新实例</strong>。</li>
+<li>选择<strong>基于角色的身份验证</strong>方法。</li>
+<li>为此连接创建名称。如果将此字段留空，则将在 Dynatrace 页面上使用名称 <strong>Role</strong> 来定义此连接。</li>
+<li>例如，在“ <strong>角色”</strong> 字段中，键入您在 Amazon 中为 Dynatrace 创建的角色的名称<code>Dynatrace_monitoring_role</code>。</li>
+<li>输入您的<strong>帐户 ID</strong> （您希望我们从中提取指标的帐户）。</li>
+<li>单击“ <strong>连接”</strong> 以验证并保存连接。</li>
+<li>成功验证并保存连接后，您的 AWS 账户将列在<strong>云和虚拟化</strong>设置页面中。
+   您应该很快就会看到 AWS 云监控数据。</li>
+</ol>
+<h2 id="aws_1">定义 AWS 资源标记</h2>
+<p>我们建议限制 AWS 监控的范围，并减少对 Amazon 的 API 调用次数。您可以使用标记来限制 Dynatrace 监视的 AWS 资源。有关详细信息，请参阅如何标记 AWS 资源？</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+          <a href="https://jinshuju.net/f/KibUGN">立即试用 Dynatrace - 最易用的 APM/AIOps 跨云智能运维平台 </a>Powered By CECTI<br>
+          本页面由 CECTI 团队维护。发现了错别字？ <a href="https://github.com/cecti/docs/issues/new">在这里提交修复</a>！
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/application.245445c6.js"></script>
+      
+        
+        
+          
+          <script src="../../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../../../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../../.."}})</script>
+      
+    
+  </body>
+</html>
